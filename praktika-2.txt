@@ -1,0 +1,32 @@
+Задание 2
+Запрос производился к сайту http://wikipedia.org
+
+
+Запрос:
+open ru.wikipedia.org 80 *Подключаемся через telnet к ru.wikipedia.org по порту 80 и отправляем HTTP запрос
+
+GET /wiki/ HTTP/1.1
+Host: ru.wikipedia.org   *Доменное имя хоста запрашиваемого ресурса.
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; ru; rv:1.9b5) Gecko/2008050509 Firefox/3.0b5   *Указание программного обеспечения клиента и его характеристики
+Accept: text/html   *Указывает, что клиент понимает текстовые документы, при этом эти документы должны быть формата html
+Connection: close    * Соединение закрывается
+
+
+Ответ:
+HTTP/1.1 301 TLS Redirect             *Пришел ответ с кодом 301 , который означает, что страница с запрашиваемого ресурса была перемещена навсегда
+Date: Thu, 29 Nov 2018 10:18:09 GMT   *Дата, когда был сформирован ответ
+Server: Varnish                       *Название веб-сервера
+X-Varnish: 919945232
+X-Cache: cp3041 int
+X-Cache-Status: int-front
+Set-Cookie: WMF-Last-Access=30-Sep-2018;Path=/;HttpOnly;secure;Expires=Tue, 31 Dec 2018 12:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=30-Sep-2018;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Tue, 31 Dec 2018 12:00:00 GMT
+X-Client-IP: 212.193.78.231
+Location: https://ru.wikipedia.org/wiki/страница    *Указывает, куда перемещена запрошенная страница
+Content-Length: 0
+Connection: close
+
+
+
+
+
